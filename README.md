@@ -14,5 +14,3 @@ List of my Small Personal Side Projects that I want to share here :)
 - [Keylogger Blog - Jerwell Savella](https://jerwellsavella-github-io.vercel.app/post/keylogger)
 
 
-## Volume Gesture Control
-- Weekend Side project I created, Volume Gesture Control using Python.
